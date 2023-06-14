@@ -19,18 +19,20 @@ function App(){
         setFotos(null);
       }
       else{
-        setFotos(response.data);
+        let urls = []
+        response.data.photos.map((element) =>{
+          urls.push(element.img_src);
+        })
+        
+        setUrl(urls);
+        
       }
     }).catch((err) =>{
       setFotos(null);
       alert('ERRO '+ err);
     });
     geraNumeroAleatorio();
-
-    fotos.photos?.map((element) =>{
-      setUrl([...url, element.img_src]);
-      })
-    }
+  }
 
   return (
     <>
