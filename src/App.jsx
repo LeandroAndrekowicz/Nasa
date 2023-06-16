@@ -38,11 +38,12 @@ function App(){
     <>
     <div className='text-center bg-amber-100'>
         <h1 className='text-5xl pb-9 animate-pulse text-amber-900'>Gere suas Fotos de Marte</h1>
-      </div>
+        <div>
+          <button className='border-1 border-amber-800 rounded-lg bg-amber-800' onClick={geraFotos}>Gerar Fotos</button>
+        </div>
+    </div>
     <div className="grid grid-cols-4 gap-4 items-center place-items-center bg-amber-100 ">
-      <div className='items-center text-center w-36 rounded-full bg-amber-200'>
-          <button onClick={geraFotos}>Gerar Fotos</button>
-      </div>
+
       {url.map(function(data){
           return(
             <img
